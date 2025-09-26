@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>MAGIC SPARK FRAMES — Muntha Sumadhur</title>
+<meta content="Portfolio of Muntha Sumadhur — Video Editor. Adobe Premiere Pro, After Effects, CapCut (PC), Filmora." name="description"/>
+<style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#ffb86b;--muted:#9aa4b2;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071226 0%, #071a2b 60%);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1000px;margin:40px auto;padding:28px}
+
+    header{display:flex;gap:18px;align-items:center}
+    .logo img{width:78px;height:78px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.5),inset 0 -6px 18px rgba(255,255,255,0.06)}
+    .intro{flex:1}
+    .intro h2{margin:0;font-size:22px}
+    .intro p{margin:6px 0 0;color:var(--muted)}
+
+    nav{display:flex;gap:10px}
+    a.btn{background:var(--glass);padding:8px 12px;border-radius:10px;color:var(--accent);text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,0.03)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:26px}
+    @media(max-width:920px){main{grid-template-columns:1fr} .sidebar{order:2}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+
+    .hero{display:flex;gap:18px;align-items:flex-start}
+    .avatar img{width:120px;height:120px;border-radius:12px;object-fit:cover;box-shadow:0 4px 16px rgba(0,0,0,0.5)}
+    .hero h3{margin:0;font-size:20px}
+    .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .pill{background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);font-weight:600;color:var(--muted);font-size:13px}
+
+    h4{margin:0 0 8px 0}
+    ul{margin:0;padding-left:18px;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:10px 12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02);font-weight:700}
+
+    .projects .proj{margin-bottom:14px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02);transition:transform 0.2s}
+    .projects .proj:hover{transform:translateY(-4px)}
+    .projects .proj h5{margin:0;font-size:15px}
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+
+    .sidebar .card + .card{margin-top:18px}
+    .socials{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
+    .socials a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:var(--accent);font-weight:700;transition:transform 0.2s}
+    .socials a:hover{transform:translateY(-3px)}
+
+    footer{margin-top:28px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* button hover */
+    .btn:hover{transform:translateY(-2px)}
+    .skill:hover{transform:translateY(-4px)}
+
+    /* subtle entrance */
+    .card{opacity:0;transform:translateY(8px);animation:enter .6s ease forwards}
+    .card:nth-child(1){animation-delay:0.05s}
+    .card:nth-child(2){animation-delay:0.12s}
+    .card:nth-child(3){animation-delay:0.18s}
+    @keyframes enter{to{opacity:1;transform:none}}
+
+    /* contact */
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;margin-top:8px}
+    form button{margin-top:10px;padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),#ffd3a7);font-weight:800;cursor:pointer}
+
+    /* thumbnails */
+    .thumb{width:100%;max-width:320px;border-radius:12px;overflow:hidden;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.5);transition:transform 0.3s}
+    .thumb:hover{transform:scale(1.03)}
+  
+.carousel{display:flex;gap:12px;overflow-x:auto;padding:12px 0;scroll-behavior:smooth}
+.carousel::-webkit-scrollbar{height:8px}
+.carousel::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:6px}
+
+
+
+.proj-card{display:flex;flex-direction:row;align-items:center;gap:10px;min-width:280px;max-width:320px;
+background:rgba(255,255,255,0.02);border-radius:10px;padding:8px;transition:transform 0.3s}
+.proj-card:hover{transform:translateY(-6px) scale(1.03)}
+.proj-thumb{width:120px;height:80px;object-fit:cover;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.5)}
+.caption{flex:1;text-align:left;font-weight:700;font-size:14px;color:#e6eef6}
+
+
+h4 {
+  margin: 0 0 12px 0 !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--accent) !important;
+}
+
+/* Extra spacing between Skills and Projects */
+#projects {
+  margin-top: 28px !important;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo"><img alt="Logo" src="logo .jpg"/></div>
+<div class="intro">
+<h2>Muntha Sumadhur — Video Editor</h2>
+<p>Creator behind <strong>MAGIC SPARK FRAMES</strong> • Editing &amp; Media — Premiere Pro, After Effects, CapCut (PC), Filmora</p>
+</div>
+<nav>
+<a class="btn" href="#projects">Projects</a>
+<a class="btn" href="#contact">Contact</a>
+</nav>
+</header>
+<main>
+<section>
+<div class="card hero">
+<div class="avatar"><img alt="My Photo" src="my.jpg"/></div>
+<div style="flex:1">
+<h3>Hi — I'm Sumadhur</h3>
+<p style="color:var(--muted);margin-top:6px">I will shoot promotional content &amp; edit social media content using advanced transitions, keyframe animation and VFX touch-ups.</p>
+<div class="tags" style="margin-top:12px">
+<span class="pill">YouTube: MAGIC SPARK FRAMES</span>
+<span class="pill">Instagram: @MAGICSPARKFRAMES</span>
+<span class="pill">Location: Nellore, Andhra Pradesh</span>
+</div>
+</div>
+</div>
+<div class="card" style="margin-top:16px">
+<h4>Skills</h4>
+<div class="skills" style="margin-top:10px">
+<div class="skill">Adobe Premiere Pro</div>
+<div class="skill">Adobe After Effects</div>
+<div class="skill">CapCut (PC)</div>
+<div class="skill">Filmora</div>
+</div>
+</div>
+<div class="card" id="projects">
+<h4>Short Films</h4>
+<div class="carousel">
+<a class="proj-card" href="https://youtu.be/e4AzrAVrl1E?si=jNJEcEALpFgztsrg" target="_blank">
+<img alt="WHY EEE" class="proj-thumb" src="WHY EEE.jpg"/>
+<div class="caption">WHY EEE ?</div>
+</a>
+<a class="proj-card" href="https://youtu.be/NiSlNKDVYJs?si=Y-npfKXk9MrxDaBW" target="_blank">
+<img alt="ECHO" class="proj-thumb" src="ECHO.jpg"/>
+<div class="caption">ECHO</div>
+</a>
+<a class="proj-card" href="https://youtu.be/5J5WJ0uL1Jw?si=ItTiww0vpwnOYHmh" target="_blank">
+<img alt="THE JOURNEY" class="proj-thumb" src="THE JOURNEY.jpg"/>
+<div class="caption">THE JOURNEY</div>
+</a>
+</div>
+<h4 style="margin-top:16px">Instagram Reels</h4>
+<div class="carousel">
+<a class="proj-card" href="https://www.instagram.com/reel/DN0BLEUZtqU/?igsh=MW5udjI0NWY0NTdweA==" target="_blank">
+<img alt="Reel 1" class="proj-thumb" src="Besthapallem.jpg"/>
+<div class="caption">Besthapalem Ganesh, Mulapeta, Nellore</div>
+</a>
+<a class="proj-card" href="https://insta-reel2" target="_blank">
+<img alt="Reel 2" class="proj-thumb" src="Yadav street 12.jpg"/>
+<div class="caption">Yadav street Ganesh, Mulapeta, Nellore</div>
+</a>
+<a class="proj-card" href="https://insta-reel3" target="_blank">
+<img alt="Reel 3" class="proj-thumb" src="Ravi chettu.jpg"/>
+<div class="caption">Ravi Chettu Ganesh, Mulapeta, Nellore</div>
+</a>
+</div>
+<h4 style="margin-top:16px">Promotional Shoots</h4>
+<div class="carousel">
+<a class="proj-card" href="https://www.instagram.com/reel/DOgeP9RExO0/?igsh=bmk5aWlxZm1reXhh" target="_blank">
+<img alt="Dress Circle" class="proj-thumb" src="Dress Circle.jpg"/>
+<div class="caption">Dress Circle</div>
+</a>
+<a class="proj-card" href="https://www.instagram.com/reel/DO545Rpk5WI/?igsh=eDdrdWk1ZXRmdHMz" target="_blank">
+<img alt="B NEW" class="proj-thumb" src="B NEW.jpg"/>
+<div class="caption">B NEW</div>
+</a>
+<a class="proj-card" href="https://www.instagram.com/reel/DO7t5e2Ez1k/?igsh=Y3hyZDY0dzlleHJi" target="_blank">
+<img alt="CMR" class="proj-thumb" src="CMR.jpg"/>
+<div class="caption">CMR</div>
+</a>
+</div>
+</div>
+<div class="card" id="contact" style="margin-top:16px">
+<h4>Contact</h4>
+<p style="color:var(--muted);margin-top:6px">Want to collaborate? Reach out to me directly.</p>
+<p><strong>Phone:</strong> +91 8074620651<br/>
+<strong>Email:</strong> <a href="mailto:sumadhur2002@gmail.com">sumadhur2002@gmail.com</a></p>
+<strong>Email:</strong> <a href="mailto:magicsparkframes@gmail.com">magicsparkframes@gmail.com</a>
+<form onsubmit="handleContact(event)">
+<input id="name" placeholder="Your name" required=""/>
+<input id="email" placeholder="Your email" required="" type="email"/>
+<textarea id="message" placeholder="Short message" required="" rows="4"></textarea>
+<button type="submit">Send message</button>
+</form>
+<p id="sent" style="display:none;margin-top:10px;color:var(--muted)">Thanks! Your message will open in your email client.</p>
+</div>
+</section>
+<aside class="sidebar">
+<div class="card">
+<h4>About the Creator</h4>
+<p style="color:var(--muted);margin-top:8px">Name: <strong>Muntha Sumadhur</strong><br>Role: Video Editor &amp; Content Creator &amp; Video grapher<br/>Brand: <strong>MAGIC SPARK FRAMES</strong></br></p>
+<div style="margin-top:12px">
+<h4>Awards &amp; Recognition</h4>
+<ul style="margin-top:8px">
+<li>Winner — Short Film Competition, Chalanachitra Club</li>
+<li>Winner — Short Film Competition during World Space Week by ISRO</li>
+</ul>
+</div>
+<div style="margin-top:12px">
+<h4>Quick links</h4>
+<div class="socials">
+<a href="https://youtube.com/@MagicSparkFrames" target="_blank">YouTube</a>
+<a href="https://instagram.com/magic_spark_frames?igsh=dnhrNmF3dDI1ZGpx" target="_blank">Instagram (Brand)</a>
+<a href="https://instagram.com/__sumadhur__?igsh=dnNmMGxvcnQ3YzJ4" target="_blank">Instagram (Personal)</a>
+</div>
+</div>
+</div>
+<div class="card" style="margin-top:18px">
+<h4>Download</h4>
+<p style="color:var(--muted);margin-top:8px">Download my full professional resume.</p>
+<a class="btn" download="" href="MUNTHA SUMADHUR _RESUME.pdf">Download Resume (PDF)</a>
+</div>
+</aside>
+</main>
+<footer>
+<div>© <span id="year"></span> MAGIC SPARK FRAMES — Muntha Sumadhur • Built with ❤️</div>
+</footer>
+</div>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Collab request from portfolio');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
+      window.location.href = `mailto:youremail@example.com?subject=${subject}&body=${body}`;
+      document.getElementById('sent').style.display='block';
+    }
+  </script>
+</body>
+</html>
